@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)http://localhost:8888/edit/Desktop/5b7/market_fact.csv -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <title>market_fact.csv</title>
+    <link id="favicon" rel="shortcut icon" type="image/x-icon" href="http://localhost:8888/static/base/images/favicon-file.ico?v=e2776a7f45692c839d6eea7d7ff6f3b2">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./market_fact.csv_files/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="./market_fact.csv_files/jquery.typeahead.min.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+<link rel="stylesheet" href="./market_fact.csv_files/codemirror.css">
+<link rel="stylesheet" href="./market_fact.csv_files/dialog.css">
+
+    <link rel="stylesheet" href="./market_fact.csv_files/style.min.css" type="text/css">
+    
+
+    <link rel="stylesheet" href="./market_fact.csv_files/custom.css" type="text/css">
+    <script src="./market_fact.csv_files/promise.min.js.download" type="text/javascript" charset="utf-8"></script>
+    <script src="./market_fact.csv_files/index.js.download" type="text/javascript"></script>
+    <script src="./market_fact.csv_files/index.js(1).download" type="text/javascript"></script>
+    <script src="./market_fact.csv_files/index.js(2).download" type="text/javascript"></script>
+    <script src="./market_fact.csv_files/require.js.download" type="text/javascript" charset="utf-8"></script>
+    <script>
+      require.config({
+          
+          urlArgs: "v=20210410115205",
+          
+          baseUrl: '/static/',
+          paths: {
+            'auth/js/main': 'auth/js/main.min',
+            custom : '/custom',
+            nbextensions : '/nbextensions',
+            kernelspecs : '/kernelspecs',
+            underscore : 'components/underscore/underscore-min',
+            backbone : 'components/backbone/backbone-min',
+            jed: 'components/jed/jed',
+            jquery: 'components/jquery/jquery.min',
+            json: 'components/requirejs-plugins/src/json',
+            text: 'components/requirejs-text/text',
+            bootstrap: 'components/bootstrap/js/bootstrap.min',
+            bootstraptour: 'components/bootstrap-tour/build/js/bootstrap-tour.min',
+            'jquery-ui': 'components/jquery-ui/ui/minified/jquery-ui.min',
+            moment: 'components/moment/min/moment-with-locales',
+            codemirror: 'components/codemirror',
+            termjs: 'components/xterm.js/dist/xterm',
+            typeahead: 'components/jquery-typeahead/dist/jquery.typeahead.min',
+          },
+          map: { // for backward compatibility
+              "*": {
+                  "jqueryui": "jquery-ui",
+              }
+          },
+          shim: {
+            typeahead: {
+              deps: ["jquery"],
+              exports: "typeahead"
+            },
+            underscore: {
+              exports: '_'
+            },
+            backbone: {
+              deps: ["underscore", "jquery"],
+              exports: "Backbone"
+            },
+            bootstrap: {
+              deps: ["jquery"],
+              exports: "bootstrap"
+            },
+            bootstraptour: {
+              deps: ["bootstrap"],
+              exports: "Tour"
+            },
+            "jquery-ui": {
+              deps: ["jquery"],
+              exports: "$"
+            }
+          },
+          waitSeconds: 30,
+      });
+
+      require.config({
+          map: {
+              '*':{
+                'contents': 'services/contents',
+              }
+          }
+      });
+
+      // error-catching custom.js shim.
+      define("custom", function (require, exports, module) {
+          try {
+              var custom = require('custom/custom');
+              console.debug('loaded custom.js');
+              return custom;
+          } catch (e) {
+              console.error("error loading custom.js", e);
+              return {};
+          }
+      })
+
+    document.nbjs_translations = {"domain": "nbjs", "locale_data": {"nbjs": {"": {"domain": "nbjs"}}}};
+    </script>
+
+    
+    
+
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="services/contents" src="./market_fact.csv_files/contents.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="custom/custom" src="./market_fact.csv_files/custom.js.download"></script></head>
+
+<body class="edit_app" data-base-url="/" data-file-path="Desktop/5b7/untitled.txt" data-jupyter-api-token="b06999c7ab77f579da478414dc418c77ff3b915879cebbb0" dir="ltr" style="">
+
+<noscript>
+    <div id='noscript'>
+      Jupyter Notebook requires JavaScript.<br>
+      Please enable it to proceed. 
+  </div>
+</noscript>
+
+<div id="header" style="display: block;">
+  <div id="header-container" class="container">
+  <div id="ipython_notebook" class="nav navbar-brand"><a href="http://localhost:8888/tree?token=b06999c7ab77f579da478414dc418c77ff3b915879cebbb0" title="dashboard">
+      <img src="./market_fact.csv_files/logo.png" alt="Jupyter Notebook">
+  </a></div>
+
+  
+
+<span id="save_widget" class="pull-left save_widget">
+    <span class="filename">market_fact.csv</span>
+    <div class="dirty-indicator-dirty" title="Unsaved changes"></div><span class="last_modified" title="Sat, Apr 10, 2021 12:17 PM">a minute ago</span>
+</span>
+
+
+  
+  
+  
+  
+
+    <span id="login_widget">
+      
+        <button id="logout" class="btn btn-sm navbar-btn">Logout</button>
+      
+    </span>
+
+  
+
+  
+  
+  </div>
+  <div class="header-bar"></div>
+
+  
+
+<div id="menubar-container" class="container">
+  <div id="menubar">
+    <div id="menus" class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+          <p class="navbar-text indicator_area">
+          <span id="current-mode" title="The current language is Plain Text">Plain Text</span>
+          </p>
+        <button type="button" class="btn btn-default navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <i class="fa fa-bars"></i>
+          <span class="navbar-text">Menu</span>
+        </button>
+        <ul class="nav navbar-nav navbar-right">
+          <li id="notification_area"><div id="notification_save" class="notification_widget btn btn-xs navbar-btn" style="display: none;"><span></span></div></li>
+        </ul>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown"><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" class="dropdown-toggle" data-toggle="dropdown">File</a>
+              <ul id="file-menu" class="dropdown-menu">
+                <li id="new-file"><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#">New</a></li>
+                <li id="save-file"><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#">Save</a></li>
+                <li id="rename-file"><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#">Rename</a></li>
+                <li id="download-file"><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#">Download</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" class="dropdown-toggle" data-toggle="dropdown">Edit</a>
+              <ul id="edit-menu" class="dropdown-menu">
+                <li id="menu-find"><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#">Find</a></li>
+                <li id="menu-replace"><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#">Find &amp; Replace</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Key Map</li>
+                <li id="menu-keymap-default" class="selected-keymap"><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#">Default<i class="fa"></i></a></li>
+                <li id="menu-keymap-sublime"><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#">Sublime Text<i class="fa"></i></a></li>
+                <li id="menu-keymap-vim"><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#">Vim<i class="fa"></i></a></li>
+                <li id="menu-keymap-emacs"><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#">emacs<i class="fa"></i></a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" class="dropdown-toggle" data-toggle="dropdown">View</a>
+              <ul id="view-menu" class="dropdown-menu">
+              <li id="toggle_header" title="Show/Hide the logo and notebook title (above menu bar)">
+              <a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#">Toggle Header</a></li>
+              <li id="menu-line-numbers"><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#">Toggle Line Numbers</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" class="dropdown-toggle" data-toggle="dropdown">Language</a>
+              <ul id="mode-menu" class="dropdown-menu">
+              <li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to APL">APL</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to PGP">PGP</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to ASN.1">ASN.1</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Asterisk">Asterisk</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Brainfuck">Brainfuck</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to C">C</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to C++">C++</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Cobol">Cobol</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to C#">C#</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Clojure">Clojure</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to ClojureScript">ClojureScript</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Closure Stylesheets (GSS)">Closure Stylesheets (GSS)</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to CMake">CMake</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to CoffeeScript">CoffeeScript</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Common Lisp">Common Lisp</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Cypher">Cypher</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Cython">Cython</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Crystal">Crystal</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to CSS">CSS</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to CQL">CQL</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to D">D</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Dart">Dart</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to diff">diff</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Django">Django</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Dockerfile">Dockerfile</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to DTD">DTD</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Dylan">Dylan</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to EBNF">EBNF</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to ECL">ECL</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to edn">edn</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Eiffel">Eiffel</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Elm">Elm</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Embedded Javascript">Embedded Javascript</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Embedded Ruby">Embedded Ruby</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Erlang">Erlang</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Factor">Factor</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to FCL">FCL</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Forth">Forth</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Fortran">Fortran</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to F#">F#</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Gas">Gas</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Gherkin">Gherkin</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to GitHub Flavored Markdown">GitHub Flavored Markdown</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Go">Go</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Groovy">Groovy</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to HAML">HAML</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Haskell">Haskell</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Haskell (Literate)">Haskell (Literate)</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Haxe">Haxe</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to HXML">HXML</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to ASP.NET">ASP.NET</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to HTML">HTML</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to HTTP">HTTP</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to IDL">IDL</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Pug">Pug</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Java">Java</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Java Server Pages">Java Server Pages</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to JavaScript">JavaScript</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to JSON">JSON</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to JSON-LD">JSON-LD</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to JSX">JSX</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Jinja2">Jinja2</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Julia">Julia</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Kotlin">Kotlin</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to LESS">LESS</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to LiveScript">LiveScript</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Lua">Lua</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Markdown">Markdown</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to mIRC">mIRC</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to MariaDB SQL">MariaDB SQL</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Mathematica">Mathematica</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Modelica">Modelica</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to MUMPS">MUMPS</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to MS SQL">MS SQL</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to mbox">mbox</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to MySQL">MySQL</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Nginx">Nginx</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to NSIS">NSIS</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to NTriples">NTriples</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Objective C">Objective C</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to OCaml">OCaml</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Octave">Octave</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Oz">Oz</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Pascal">Pascal</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to PEG.js">PEG.js</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Perl">Perl</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to PHP">PHP</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Pig">Pig</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Plain Text">Plain Text</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to PLSQL">PLSQL</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to PowerShell">PowerShell</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Properties files">Properties files</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to ProtoBuf">ProtoBuf</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Python">Python</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Puppet">Puppet</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Q">Q</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to R">R</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to reStructuredText">reStructuredText</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to RPM Changes">RPM Changes</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to RPM Spec">RPM Spec</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Ruby">Ruby</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Rust">Rust</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to SAS">SAS</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Sass">Sass</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Scala">Scala</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Scheme">Scheme</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to SCSS">SCSS</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Shell">Shell</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Sieve">Sieve</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Slim">Slim</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Smalltalk">Smalltalk</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Smarty">Smarty</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Solr">Solr</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Soy">Soy</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to SPARQL">SPARQL</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Spreadsheet">Spreadsheet</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to SQL">SQL</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to SQLite">SQLite</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Squirrel">Squirrel</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Stylus">Stylus</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Swift">Swift</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to sTeX">sTeX</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to LaTeX">LaTeX</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to SystemVerilog">SystemVerilog</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Tcl">Tcl</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Textile">Textile</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to TiddlyWiki ">TiddlyWiki </a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Tiki wiki">Tiki wiki</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to TOML">TOML</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Tornado">Tornado</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to troff">troff</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to TTCN">TTCN</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to TTCN_CFG">TTCN_CFG</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Turtle">Turtle</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to TypeScript">TypeScript</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to TypeScript-JSX">TypeScript-JSX</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Twig">Twig</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Web IDL">Web IDL</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to VB.NET">VB.NET</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to VBScript">VBScript</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Velocity">Velocity</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Verilog">Verilog</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to VHDL">VHDL</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Vue.js Component">Vue.js Component</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to XML">XML</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to XQuery">XQuery</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Yacas">Yacas</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to YAML">YAML</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to Z80">Z80</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to mscgen">mscgen</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to xu">xu</a></li><li><a href="http://localhost:8888/edit/Desktop/5b7/market_fact.csv#" title="Set language to msgenny">msgenny</a></li></ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="lower-header-bar"></div>
+
+
+</div>
+
+<div id="site" style="height: 525px; display: block;">
+
+
+<div id="texteditor-backdrop">
+<div id="texteditor-container" class="container"><div class="CodeMirror cm-s-ipython CodeMirror-wrap" style="height: 485px;"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 475px; left: 597.109px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true" style="display: block; bottom: 0px;"><div style="min-width: 1px; height: 142811px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 45px; margin-bottom: -17px; border-right-width: 13px; min-height: 142811px; padding-right: 17px; padding-bottom: 0px;"><div style="position: relative; top: 142069px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>8400</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors" style="visibility: hidden;"><div class="CodeMirror-cursor" style="left: 552.109px; top: 714px; height: 17px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation" style=""><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8358</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_3639","Prod_5","SHP_5040","Cust_1266",40.34,0.03,2,-23.62,7.74,0.5</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8359</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_3610","Prod_14","SHP_4998","Cust_1266",1759.65,0.06,3,-2213.75,24.49,0.5</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8360</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_3582","Prod_6","SHP_4959","Cust_1266",539.66,0,26,147.08,5.97,0.38</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8361</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_3543","Prod_3","SHP_4906","Cust_1266",514.22,0.02,17,187.37,2.99,0.35</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8362</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_3639","Prod_10","SHP_5038","Cust_1266",2173.26,0,35,-465.66,36.61,0.61</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8363</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_3553","Prod_16","SHP_4920","Cust_1274",128.31,0.05,39,-55.72,1.92,0.84</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8364</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_3593","Prod_5","SHP_4975","Cust_1274",1175.53,0.03,18,257.59,14.48,0.46</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8365</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_3630","Prod_6","SHP_5028","Cust_1274",134.68,0.1,29,-66.46,4.7,0.38</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8366</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_3574","Prod_16","SHP_4948","Cust_1274",416.99,0.02,32,-93.62,4.59,0.82</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8367</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_3588","Prod_3","SHP_4968","Cust_1274",107.63,0,15,-29.89,5.48,0.37</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8368</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_3593","Prod_3","SHP_4974","Cust_1274",12073.06,0.03,39,5081.87,19.99,0.38</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8369</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_3593","Prod_15","SHP_4975","Cust_1274",6685.05,0.09,25,1653.6,24.49,NA</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8370</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_3574","Prod_6","SHP_4947","Cust_1274",438.66,0.01,41,58.86,4.78,0.4</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8371</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_3633","Prod_3","SHP_5031","Cust_1274",1169.26,0.02,41,515.62,1.49,0.38</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8372</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_2696","Prod_13","SHP_3690","Cust_1006",62.78,0.04,20,-17.75,2.03,0.57</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8373</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_2624","Prod_4","SHP_3591","Cust_1006",4924.135,0.07,28,1049.54,8.99,0.58</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8374</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_2772","Prod_9","SHP_3806","Cust_1006",56.9,0.03,7,12.64,1.39,0.36</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8375</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_2600","Prod_16","SHP_3560","Cust_1006",106.64,0.1,30,-31.95,1.32,0.83</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8376</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_2658","Prod_5","SHP_3637","Cust_1006",1082.66,0.08,14,-256.93,48.2,0.74</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8377</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_2772","Prod_3","SHP_3806","Cust_1006",1413.82,0.1,47,226.53,11.63,0.37</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8378</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_2624","Prod_8","SHP_3590","Cust_1006",1211,0,36,-27.99,6.5,0.79</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8379</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_2722","Prod_12","SHP_3729","Cust_1006",34.01,0,12,10.58,0.5,0.39</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8380</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_2706","Prod_2","SHP_3705","Cust_1006",1361.91,0.05,20,312.52,3.5,0.59</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8381</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_2722","Prod_5","SHP_3730","Cust_1006",1008.95,0.04,41,69.31,8.99,0.5</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8382</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_2772","Prod_6","SHP_3807","Cust_1006",308.92,0.04,45,-143.58,7.37,0.37</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8383</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_2696","Prod_4","SHP_3691","Cust_1006",2836.0505,0.01,25,561.13,8.99,0.59</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8384</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_2658","Prod_3","SHP_3636","Cust_1006",120.98,0,28,-92.85,5.34,0.38</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8385</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_2722","Prod_1","SHP_3731","Cust_1006",3508.33,0.04,21,-546.98,35,0.85</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8386</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_4620","Prod_3","SHP_6435","Cust_1577",59.62,0.04,10,-56.3,7.78,0.37</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8387</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_1833","Prod_3","SHP_2527","Cust_637",611.16,0.04,46,100.22,4.98,0.4</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8388</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_2324","Prod_7","SHP_3189","Cust_851",121.87,0.07,39,11.32,1.35,0.4</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8389</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_2220","Prod_3","SHP_3019","Cust_851",41.06,0.04,4,-16.39,6.28,0.35</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8390</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_4424","Prod_1","SHP_6165","Cust_1519",994.04,0.03,10,-335.06,35,NA</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8391</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_4444","Prod_13","SHP_6192","Cust_1519",159.41,0,44,34.68,0.98,0.52</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8392</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_5435","Prod_16","SHP_7594","Cust_1798",316.99,0.04,47,-276.54,8.37,0.58</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8393</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_5435","Prod_4","SHP_7594","Cust_1798",1991.8985,0.07,20,88.36,7.69,0.58</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8394</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_5384","Prod_9","SHP_7519","Cust_1798",181.5,0.08,43,-6.24,2.5,0.37</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8395</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_5348","Prod_8","SHP_7470","Cust_1798",356.72,0.07,9,12.61,1.99,0.44</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8396</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_5353","Prod_4","SHP_7479","Cust_1798",2841.4395,0.08,28,374.63,7.69,0.59</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8397</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_5411","Prod_6","SHP_7555","Cust_1798",127.16,0.1,20,-74.03,6.92,0.37</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8398</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_5388","Prod_6","SHP_7524","Cust_1798",243.05,0.02,39,-70.85,5.35,0.4</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8399</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_5348","Prod_15","SHP_7469","Cust_1798",3872.87,0.03,23,565.34,30,0.62</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8400</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Ord_5459","Prod_6","SHP_7628","Cust_1798",603.69,0,47,131.39,4.86,0.38</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 13px; width: 1px; border-bottom: 0px solid transparent; top: 142811px;"></div><div class="CodeMirror-gutters" style="height: 142824px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 44px;"></div></div></div></div></div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+    
+
+
+<script src="./market_fact.csv_files/main.min.js.download" type="text/javascript" charset="utf-8"></script>
+
+
+<script type="text/javascript">
+  function _remove_token_from_url() {
+    if (window.location.search.length <= 1) {
+      return;
+    }
+    var search_parameters = window.location.search.slice(1).split('&');
+    for (var i = 0; i < search_parameters.length; i++) {
+      if (search_parameters[i].split('=')[0] === 'token') {
+        // remote token from search parameters
+        search_parameters.splice(i, 1);
+        var new_search = '';
+        if (search_parameters.length) {
+          new_search = '?' + search_parameters.join('&');
+        }
+        var new_url = window.location.origin + 
+                      window.location.pathname + 
+                      new_search + 
+                      window.location.hash;
+        window.history.replaceState({}, "", new_url);
+        return;
+      }
+    }
+  }
+  _remove_token_from_url();
+</script>
+
+
+</body></html>
